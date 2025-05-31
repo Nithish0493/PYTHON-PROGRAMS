@@ -1,0 +1,70 @@
+import time
+import random
+name1=input("enter player 1:")
+name2=input("enter player 2:")
+print("hello {} and {}".format(name1,name2))
+print("computer has fixed five numbers")
+print("you both have 3 choices")
+
+
+nums=[]
+while (len(nums)!=5):
+    d=random.randint(1,10)
+    if d in nums:
+        continue
+    else:
+        nums.append(d)
+print(nums)
+
+
+
+player1=[]
+player2=[]
+s1=10
+s2=0
+for i in range(3):
+    print("{} enter your guess".format(name1))
+    ans=int(input())
+    while(ans in player1 and ans in player2):
+        ans=int(input("it is already chosen"))
+        
+    player1.append(ans)
+    if (ans in nums):
+        print("correct")
+        s1=s1+1
+    else:
+        print("wrong")
+    
+        
+    print("{} enter your guess".format(name2))
+    ans1=int(input())
+    while(ans1 in player1 or ans1 in player2):
+        ans1=int(input("it is already chosen"))
+    player2.append(ans1)
+    if (ans1 in nums):
+        print("correct")
+        s2=s2+1
+    else:
+        print("wrong")
+        
+    
+        
+time.sleep(2)
+print("-------------")
+print("summary")
+print("computer has",nums)
+print(name1,"predicted",player1)
+print(name2,"predicted",player2)
+print(name1,"score is",s1)
+print(name2,"score is",s2)
+
+if s1>s2:
+    print(name1,"is winner")
+else:
+    print(name2,"is winner")
+        
+        
+        
+        
+        
+        
