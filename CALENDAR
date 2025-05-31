@@ -1,3 +1,11 @@
+# displaying calendar for a particular year
 import calendar
 year=2025
 print(calendar.calendar(2025))
+
+#for displaying particular month
+print(calendar.month(2025,4)
+
+#checking whether it is leap year
+print(calendar.isleap(2025))
+
