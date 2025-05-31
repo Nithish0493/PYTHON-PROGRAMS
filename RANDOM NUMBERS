@@ -17,7 +17,6 @@ while (len(nums)!=5):
 print(nums)
 
 
-
 player1=[]
 player2=[]
 s1=10
