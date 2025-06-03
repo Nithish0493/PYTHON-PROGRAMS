@@ -1,0 +1,43 @@
+from collections import Counter
+nums1=[2,2,2,4,5,5,5,6]
+nums2=[2,2,5,6]
+c1=Counter(nums1)
+c2=Counter(nums2)
+result=[]
+for num in c1 & c2:
+    result.extend([num]* min(c1[num],c2[num]))
+print(result)
+
+------------------------------------------------------------------
+
+from collections import Counter
+a="ArunKishoreAA"
+b="AnandkiyaA"
+res=[]
+a1=Counter(a)
+b1=Counter(b)
+result=[]
+for num in a1 & b1:
+    result.extend([num]* min(a1[num],b1[num]))
+print(result)
+
+--------------------------------------------------------------------
+
+from collections import Counter
+a=[1,1,1,1,2,2,2,3,3,3,4,5]
+b=[5,5,5,5,5,5,3,3]
+sum1=0
+tot=1
+res=0
+a1=Counter(a)
+b1=Counter(b)
+
+for i in a1 & b1:
+    sum1=sum1+i
+    tot=tot*a1[i]
+    res=res-b1[i]
+print(sum1)
+print(tot)
+print(res)
+
+-----------------------------------------------------------------------
