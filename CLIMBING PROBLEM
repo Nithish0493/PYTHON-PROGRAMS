@@ -1,0 +1,22 @@
+def cal(ht,up,down):
+    d=0
+    t=0
+    i=1
+    while True:
+        if (d>=ht):
+            break
+            
+        elif i%2==1:
+            d=d+up
+            t=t+1
+        
+        else:
+            d=d-down
+            t=t+1
+        i=i+1
+    
+        
+    print(t)
+    
+cal(30,10,5)
+cal(21,5,3)
