@@ -1,0 +1,11 @@
+arr=input()
+a=arr.split()
+l=[]
+t=tuple(l)
+for i in a:
+    l.append(int(i))
+
+if l==t:
+    print("no")
+else:
+    print("yes")
