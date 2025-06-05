@@ -1,0 +1,5 @@
+with open("bangalore.txt", "r") as file:
+    data = file.readline()
+    for line in data:
+        word = line.split
+        print(word)
