@@ -1,0 +1,7 @@
+data=[ ["name","age","dept"],
+       ["raju","23","cse"],
+       ["kenny","45","ece"]
+     ]
+     
+for i in data:
+    print("%-10s %-5s %-5s"%(i[0],i[1],i[2]))
