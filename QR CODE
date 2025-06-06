@@ -1,7 +1,34 @@
 import qrcode
-text="today day 9 I hope you are listening"
-r=qrcode.QRcode()
-r.add=data(text)
+text = "today day 9 I hope you are listening"
+
+# Correct the class name (it should be `QRCode`)
+r = qrcode.QRCode()
+
+# Fix the method to add data (should be `add_data`)
+r.add_data(text)
+
+# Generate the QR code matrix
 r.make(fit=True)
-img=r.make_image(fill_color="black",back_color="white")
-img.save("day8.png")
+
+# Fix the method for image creation (`make_image` should be called directly on `r`)
+img = r.make_image(fill_color="black", back_color="white")
+
+# Ensure the filename matches the intended day
+img.save("day9.png")
+
+----------------------------------------------------------------------------------------------------------
+
+import qrcode
+def read_text_from_file(filepath):
+    with open(filepath,"r") as file:
+        text=file.readline()
+    return text
+filepath="msg.txt"
+text_message=read_text_from_file(filepath)
+qr=qrcode.QRCode()
+qr.add_data(text_message)
+qr.make(fit=True)
+img=qr.make_image(fill_color="black",back_color="white")
+img.save("nithish.png")
+
+--------------------------------------------------------------------------------------------------------------------------
