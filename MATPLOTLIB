@@ -1,0 +1,15 @@
+# SCORE ANALYSIS- visualization
+
+import numpy as np
+import matplotlib.pyplot as plt
+overs=np.arange(1,11)
+scores=[3,6,7,8,10,4,15,5,8,17]
+plt.bar(overs,scores,color="green")
+plt.title("score analysis")
+plt.xlabel("overs")
+plt.ylabel("scores")
+plt.xticks(overs)
+plt.grid(axis="y",alpha=0.7)
+plt.show()
+
+plt.plot(overs, scores, marker="o", linestyle="-", color="blue", label="Score Analysis")
