@@ -1,0 +1,13 @@
+'''Question: Write a Python function called isround(a) that determines whether a given number will eventually reach 1
+when repeatedly replaced with the sum of the squares of its digits. If it reaches 1, return True; otherwise, return False if a cycle is detected.'''
+
+def isround(a):
+    l=[a]
+    while(a!=1):
+        l.append(a)
+        a=sum([int(i) * int(i) for i in str(a)])
+        if(a in l):
+            return False
+        return True
+
+print(isround(68))
