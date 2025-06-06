@@ -1,0 +1,32 @@
+def a():
+    yield 10
+    yield 20
+    yield 30
+gen=a()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+-----------------------------------------------------------
+
+def a():
+   for i in range(10):
+       yield(i)
+gen=a()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+-------------------------------------------------------------
+
+def fib(x):
+    a,b=0,1
+    for i in range(x):
+       yield a
+       a, b = b, a + 1
+
+
+for i in fib(7):
+    print(i,end=" ")
+
+------------------------------------------------------------
