@@ -18,8 +18,17 @@ for i in bal:
     if(len(to_remove)==3):
         break
 final=removed+to_remove
+x=1
 for i in final:
-    print("{} has been removed-sal {} and memo is {}".format(i[0],i[1],i[2]))
+    print("{}.{} has been removed-sal {} and memo is {}".format(x,i[0],i[1],i[2]))
+    x=x+1
+
+
+
+
+
+
+
 
 
 
